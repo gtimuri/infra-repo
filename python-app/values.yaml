@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: gtimuri/python-app
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "v1"
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 5000
+
+gateway:
+  enabled: true
+  name: traefik-gateway
+  namespace: traefik
+  hostname: python-app.test.com
