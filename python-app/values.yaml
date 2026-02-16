@@ -1,9 +1,8 @@
-replicaCount: 1
+replicaCount: 3
 
 image:
   repository: gtimuri/python-app
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
   tag: "v1"
 
 service:
